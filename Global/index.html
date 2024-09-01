@@ -1,152 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap-reboot.min.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Global</title>
 </head>
-<body>
-    <section class="promo">
-        <div class="container">
-            <header class="header">
-                <a href="#" class="header__logo">
-                    <img src="icons/Logo.png" alt="logo">
-                </a>
-                <div class="header__menu">
-                    <a href="#">Mobile Top Up</a>
-                    <a href="#">About</a>
-                    <a href="#">Rate</a>
-                    <a href="#">Help</a>
-                </div>
-                <button class="button">Sign Up</button>
-            </header>
-            <div class="row">
-                <div class="col-7">
-                    <div class="promo__buy">
-                        <h1 class="promo__buy-title">
-                            Now Buy Your<br>
-                            PIN or <span class="promo__buy-text_orange">Top Up</span><br>
-                            With Bank Transfer
-                        </h1>
-                        <div class="promo__buy-subheader">
-                            We Make international calling simple, relible, and cheap<br>
-                            basedon your unique calling behavior.<br>
-                        </div>
-                        <button class="button button_get">Get Started</button>
-                    </div>
-                    <div class="promo__form">
-                        <input type="text" class="promo__form-input" placeholder="Where do you want to call?">
-                        <button class="button button_search">
-                            <img src="icons/search (1).png" alt="search">
-                        </button>
-                    </div> 
-                    <div class="promo__users">
-                        <div class="promo__users-ellips">
-                            <img src="icons/Ellipse1.png" alt="">
-                            <img src="icons/Ellipse2.png" alt="">
-                            <img src="icons/Ellipse3.png" alt="">
-                            <img src="icons/Ellipse4.png" alt="">
-                            <div class="cross">&times;</div>
-                        </div>
-                        <div class="promo__users-descr">
-                            45k+ Regular User. <span class="promo__users-descr_orange">View Price Plan</span>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="header__wrapper">
+                        <a href="#" class="header__logo">
+                            <img class="header__logo-img" src="icons/Logo.svg" alt="logo">
+                        </a>
+                        <div class="menu">
+                            <div class="header__menu">
+                                <a class="header__link" href="#">Mobile Top Up</a>
+                                <a class="header__link" href="#">About</a>
+                                <a class="header__link" href="#">Rate</a>
+                                <a class="header__link" href="#">Help</a>
+                            </div>
+                            <button class="button">Sign Up</button>
+                        </div>                            
+                        
+                        <div class="hamburger ">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
-                </div>
-                <div class="col-5">
-                    <div class="promo__girl">
-                        <img src="icons/girl3.png" alt="Girl">
-                        <img src="icons/EllipseGreen.png" alt="EllipseGreen">
-                        <img src="icons/EllipseSlim.png" alt="EllipseSlim">
-                        <div class="anim-box">
-                            <img class="ellipse-england" src="icons/EllipseEngland.png" alt="England">
-                            <img class="ellipse-italy" src="icons/EllipseItaly.png" alt="Italy">
-                            <img class="ellipse-india-one" src="icons/EllipseIndia.png" alt="India1">
-                            <img class="ellipse-india-two" src="icons/EllipseIndia.png" alt="India2">
-                            <img class="ellipse-india-three" src="icons/EllipseIndia.png" alt="India3">
-                        </div>
-                    </div> 
+                    </div>
+                    
+                    
                 </div>
             </div>
-            <div class="row">
-                <div class="col-9">
-                    <div class="box">
-                        <div class="circle"></div>
-                        <div class="rotating-element"></div>
+            
+        </header>
+        <section class="promo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+
                     </div>
                 </div>
-            </div>            
-        </div>
-    </section>
+                <div class="row">
+                    <div class="col-xl-7 col-lg-8 col-md-12">
+                        <div class="promo__buy">
+                            <h1 class="promo__buy-title">
+                                Now Buy Your<br>
+                                PIN or <span class="promo__buy-text_orange">Top Up</span><br>
+                                With Bank Transfer
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flex-md-row flex-column-reverse">
+                    <div class="col-xl-7 col-lg-6 col-md-6 ">
+                        <div class="promo__subheader" id="promo_description">
 
+                        </div>
+                        <button class="button button_get">Get Started</button>
+                        <form class="promo__form">
+                            <input type="text" id="inputField" class="promo__form-input" placeholder="Where do you want to call?">
+                            <div id="error-message" class="error-message"></div>
+                            <button type="submit" class="button button_search">
+                                <img src="icons/search (1).png" alt="search">
+                            </button>
+                        </form>
+                        <div class="promo__users">
+                            <div class="promo__users-ellips">
+                                <img src="icons/Ellipse1.png" alt="">
+                                <img src="icons/Ellipse2.png" alt="">
+                                <img src="icons/Ellipse3.png" alt="">
+                                <img src="icons/Ellipse4.png" alt="">
+                                <div class="cross">&times;</div>
+                            </div>
+                            <div class="promo__users-descr">
+                                45k+ Regular User. <span class="promo__users-descr_orange">View Price Plan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-md-6 ">
+                        <div class="promo-girl">
+                            <div class="promo-girl__img">
+                                <img src="icons/girl3.png" alt="" class="promo-girl__img-elem">
+                            </div>
+                            <div class="divider">
+                                <img class="divider__elem" src="icons/flags/flag-india.png" alt="India1">
+                                <img class="divider__elem" src="icons/flags/flag-india.png" alt="India2">
+                                <img class="divider__elem" src="icons/flags/flag-italy.png" alt="Italy">
+                                <img class="divider__elem" src="icons/flags/flag-india.png" alt="India3">
+                                <img class="divider__elem" src="icons/flags/flag-england.png" alt="England">
 
-    <!-- Подключение JS Bootstrap (и jQuery и Popper.js, если используете функционал Bootstrap, который зависит от них) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        window.onload = function() {
-            setTimeout(function() {
-                const animBox = document.querySelector('.anim-box');
-                const elements = animBox.querySelectorAll('img');
-        
-                elements.forEach((element, index) => {
-                    setTimeout(() => {
-                        element.classList.add('animate');
-                        
-                        // Adding rotation class after animation ends
-                        element.addEventListener('transitionend', function() {
-                            element.classList.add('rotate');
-                        }, { once: true });
-                    }, index * 400); // Stagger animations with a delay for each element
-                });
-            }, 3000);
-        };
-        </script>
-        
-    <!-- <script>window.onload = function() {
-        setTimeout(function() {
-            const ellipseEngland = document.querySelector('.ellipse-england');
-            ellipseEngland.classList.add('animate');
-    
-            // Добавляем вращение после завершения первой анимации
-            ellipseEngland.addEventListener('transitionend', function() {
-                ellipseEngland.classList.add('rotate');
-            }, { once: true });
-        }, 3000);
-    };
-    </script> -->
-    <!-- <script>window.addEventListener('load', function() {
-        setTimeout(function() {
-            const elements = document.querySelectorAll('.anim-box img');
-            
-            elements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.add('animate');
-                }, index * 400); // Задержка 0.4 секунды для каждого следующего элемента
-            });
-        }, 3000); // Задержка 3 секунды после загрузки страницы
-    });
-    </script> -->
-    <!-- <script>window.addEventListener('load', function() {
-        setTimeout(function() {
-            document.querySelector('.anim-box').classList.add('animate');
-        }, 3000);
-    });
-    </script> -->
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const ellipseEngland = document.querySelector(".anim-box");
-            setTimeout(() => {
-                ellipseEngland.classList.add("animate");
-            }, 1000); // 3 секунды задержки
-        });
-    </script> -->
-</body>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/script.js"></script>
+
+    </body>
 </html>
