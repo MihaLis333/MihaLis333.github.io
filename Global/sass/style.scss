@@ -1,0 +1,355 @@
+body {
+    background-color: #ECF7F3;
+    font-family: "Poppins", sans-serif;
+    /* margin: 0 auto; */
+}
+
+.container {
+    max-width: 1110px;
+}
+.hamburger {
+    display: none;
+}
+.header {
+    padding-top: 30px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    &__logo {
+        width: 33%;
+        &-img {
+            max-width: 131px;
+            max-height: 40px;
+        }
+    }
+
+    .menu {
+        width: 66%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 42px;
+        font-size: 16px;
+        font-weight: 300;
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A;
+        }
+    }
+    &__link {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: rgb(251, 155, 105);
+            display: block;
+            position: absolute;
+            transition: .5s all;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:hover{
+            &::before{
+                width: 40%;
+            }
+        }
+    }
+}
+.promo {
+    overflow: hidden;
+    &__buy {
+        /* max-width: 450px; */
+        padding-top: 119px;
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 65px;
+            color: #2D2D2D;
+        }
+
+        &-text_orange {
+            color: #FF8345;
+        }
+
+    }
+    &__subheader {
+        font-size: 15px;
+        font-weight: 500;
+        color: #7C7C7C;
+        margin-top: 30px;
+        line-height: 26px;
+    }
+
+
+    &__form {
+        position: relative;
+        margin-top: 50px;
+        max-width: 597px;
+        max-height: 62px;
+
+        &-input {
+            color: #A1A1A1;
+            font-size: 16px;
+            font-weight: 400;
+            background-color: #FFFFFF;
+            border-radius: 30px;
+            border: none;
+            width: 100%;
+            height: 62px;
+            padding-left: 40px;
+            box-sizing: border-box;
+            /* Учитывает padding и border */
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    }
+
+
+    &__users {
+        display: flex;
+        max-height: 38px;
+        max-width: 400px;
+        gap: 12px;
+        margin: 40px 0 44px 0;
+
+        &-ellips {
+            position: relative;
+            height: 38px;
+            width: 100px;
+
+            img {
+                position: absolute;
+                height: 38px;
+                width: 38px;
+                top: 0;
+                left: 0;
+                margin-left: 0;
+
+                &:nth-child(1) {
+                    z-index: 4;
+                }
+
+                &:nth-child(2) {
+                    z-index: 3;
+                    left: 20px;
+                }
+
+                &:nth-child(3) {
+                    z-index: 2;
+                    left: 40px;
+                }
+
+                &:nth-child(4) {
+                    z-index: 1;
+                    left: 60px;
+                }
+            }
+
+            .cross {
+                position: absolute;
+                z-index: 1;
+                left: 80px;
+                width: 11px;
+                height: 11px;
+                color: #FFFFFF;
+                position: absolute;
+                top: -4px;
+                left: 84px;
+                font-size: 34px;
+                transform: rotate(45deg);
+
+            }
+        }
+
+        &-descr {
+            font-size: 16px;
+            font-weight: 300;
+            color: #707070;
+            margin: auto 0;
+
+            &_orange {
+                color: #FF8345;
+                font-weight: 500;
+            }
+        }
+    }
+
+
+    &-girl {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__img {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+            &.up {
+                z-index: unset;
+            }
+
+            &::before {
+                content: '';
+                width: 280px;
+                height: 280px;
+                background: #48B774;
+                display: block;
+                border-radius: 100%;
+                position: absolute;
+                z-index: -1;
+                top: 15%;
+            }
+        }
+
+        .divider {
+            border: 2px solid #E8E8E8;
+            width: 480px;
+            height: 480px;
+            border-radius: 100%;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: -1;
+            bottom: 140px;
+        }
+        
+        .divider__elem {
+            position: absolute;
+            transform-origin: 50% 50%;
+            transform: translate(0, 0); /* Изначальное положение в центре */
+            transition: 1s all ease-out; /* Плавный переход для выезда */
+            opacity: 0; /* Элементы скрыты до начала анимации */
+        }
+        
+        .divider__elem.show {
+            opacity: 1; /* Показываем элементы перед началом выезда */
+        }
+        
+        .divider__elem.move-out {
+            transition: transform 1s ease-out; /* Переопределяем transition для выезда */
+        }
+        
+        /* Анимация вращения для элемента, выехавшего вправо (1 элемент) */
+        @keyframes rotateAroundRight {
+            0% {
+                transform: rotate(0deg) translateX(240px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateX(240px) rotate(-360deg);
+            }
+        }
+        
+        /* Анимация вращения для элемента, выехавшего влево (2 элемент) */
+        @keyframes rotateAroundLeft {
+            0% {
+                transform: rotate(0deg) translateX(-240px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateX(-240px) rotate(-360deg);
+            }
+        }
+        
+        /* Анимация вращения для элемента, выехавшего вверх (3 элемент) */
+        @keyframes rotateAroundUp {
+            0% {
+                transform: rotate(0deg) translateY(-240px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateY(-240px) rotate(-360deg);
+            }
+        }
+        
+        /* Анимация вращения для элемента, выехавшего диагонально вверх-вправо (4 элемент) */
+        @keyframes rotateAroundUpRight {
+            0% {
+                transform: rotate(0deg) translate(170px, -170px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translate(170px, -170px) rotate(-360deg);
+            }
+        }
+        
+        /* Анимация вращения для элемента, выехавшего диагонально вверх-влево (5 элемент) */
+        @keyframes rotateAroundUpLeft {
+            0% {
+                transform: rotate(0deg) translate(-170px, -170px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translate(-170px, -170px) rotate(-360deg);
+            }
+        }
+        
+        /* Применение анимации к соответствующим элементам */
+        .divider__elem:nth-child(1).start-rotation {
+            animation: rotateAroundRight 6s linear infinite;
+        }
+        
+        .divider__elem:nth-child(2).start-rotation {
+            animation: rotateAroundLeft 6s linear infinite;
+        }
+        
+        .divider__elem:nth-child(3).start-rotation {
+            animation: rotateAroundUp 6s linear infinite;
+        }
+        
+        .divider__elem:nth-child(4).start-rotation {
+            animation: rotateAroundUpRight 6s linear infinite;
+        }
+        
+        .divider__elem:nth-child(5).start-rotation {
+            animation: rotateAroundUpLeft 6s linear infinite;
+        }
+        
+        /* Настройка для выезда элементов в разные направления */
+        .divider__elem:nth-child(1).move-out {
+            transform: translateX(240px); /* Выезд вправо */
+            width: 80px;
+            height: 80px;
+        }
+        
+        .divider__elem:nth-child(2).move-out {
+            transform: translateX(-240px); /* Выезд влево */
+            width: 80px;
+            height: 80px;
+        }
+        
+        .divider__elem:nth-child(3).move-out {
+            transform: translateY(-240px); /* Выезд вверх */
+            width: 120px;
+            height: 120px;
+        }
+        
+        .divider__elem:nth-child(4).move-out {
+            transform: translate(170px, -170px); /* Выезд диагонально вверх-вправо */
+        }
+        
+        .divider__elem:nth-child(5).move-out {
+            transform: translate(-170px, -170px); /* Выезд диагонально вверх-влево */
+        }
+
+    }
+}  
+@import 'buttons';
+@import 'media';  
